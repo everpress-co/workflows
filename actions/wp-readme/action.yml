@@ -1,0 +1,9 @@
+name: WP Readme
+description: Change README.md to readme.txt in WordPress style.
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Generate readme.txt
+      shell: bash
+      run: curl -L https://raw.githubusercontent.com/evrpress/wp-readme/master/wp-readme.php | php
